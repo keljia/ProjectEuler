@@ -21,6 +21,7 @@ public class Problem22_NameScores {
         String allNames = scan.nextLine();
         String[] nameArray = allNames.split("\",\"");
         nameArray[0] = nameArray[0].substring(1);
+        nameArray[nameArray.length - 1] = nameArray[nameArray.length - 1].substring(0, nameArray[nameArray.length - 1].length() - 1);
         Arrays.sort(nameArray);
 
         int sumOfScores = 0;
@@ -28,10 +29,9 @@ public class Problem22_NameScores {
         for (int i = 0; i < nameArray.length; i++) {
             String name = nameArray[i];
             int score = 0;
-            System.out.println(name);
             for (int j = 0; j < name.length(); j++) {
                 char letter = name.charAt(j);
-                int letterValue = 1;
+                int letterValue;
                 
                 // <editor-fold defaultstate="collapsed" desc="Switch from chars to numbers">
                 switch (letter) {
@@ -112,6 +112,9 @@ public class Problem22_NameScores {
                         break;
                     case 'Z':
                         letterValue = 26;
+                        break;
+                    default:
+                        letterValue = 1;
                         break;
                 }
                 
