@@ -10,7 +10,7 @@ package Problems;
  *
  * @author Kelly
  */
-public class Problem97_LargeNonMersennePrime {
+public class Problem097_LargeNonMersennePrime {
     public static void main (String[] args) {
         long num = 1;
         for (int i = 1; i <= 7830457; i++) {
