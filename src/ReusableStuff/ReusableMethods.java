@@ -18,6 +18,7 @@ public class ReusableMethods {
         
     }
     
+    // sieve of Erastothenes 
     public static ArrayList<Integer> sieve(int n) {
         boolean[] a = new boolean[n + 1];
         Arrays.fill(a, true);
